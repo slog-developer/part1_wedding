@@ -26,7 +26,7 @@ function ImageViewer({
   }
   return (
     <div className={cx('dimmed')}>
-      <CloseButton onClose={onClose} className={cx('icon-close')} />
+      <CloseButton onClose={onClose} className={cx('ico-close')} />
       <Swiper
         spaceBetween={10}
         slidesPerView={1}

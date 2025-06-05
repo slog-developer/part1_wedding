@@ -1,0 +1,10 @@
+@import '@scss/utils.scss';
+
+.invitation {
+  @include txt-content;
+}
+.ico-letter {
+  width: 24px;
+  height: 24px;
+  margin: 72px 0 8px;
+}

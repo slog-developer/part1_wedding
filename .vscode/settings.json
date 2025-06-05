@@ -8,6 +8,7 @@
   "eslint.nodePath": ".yarn/sdks",
   // "prettier.prettierPath": ".yarn/sdks/prettier/index.cjs",
   "editor.formatOnSave": true,
+  "editor.hover.enabled": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",

@@ -3,15 +3,16 @@ import classNames from 'classnames/bind'
 
 import styles from './App.module.scss'
 
-import FullScreenMessage from './components/shared/FullScreenMessage'
-
-import Heading from './components/sections/Heading'
-import Video from './components/sections/Video'
+import FullScreenMessage from '@shared/FullScreenMessage'
 
 import { Wedding } from '@models/wedding'
-import ImageGallery from './components/sections/ImageGallery'
-import Intro from './components/sections/Intro'
-import Invitation from './components/sections/Invitation'
+
+import Heading from '@components/sections/Heading'
+import Video from '@components/sections/Video'
+import Intro from '@components/sections/Intro'
+import Invitation from '@components/sections/Invitation'
+import ImageGallery from '@components/sections/ImageGallery'
+import Calendar from '@components/sections/Calendar'
 
 const cx = classNames.bind(styles)
 
@@ -77,6 +78,7 @@ function App() {
       />
       <Invitation message={invitation} />
       <ImageGallery images={galleryImages} />
+      <Calendar date={date} />
       {/* {JSON.stringify(wedding)} */}
     </div>
   )

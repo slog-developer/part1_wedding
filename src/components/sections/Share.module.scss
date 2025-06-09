@@ -1,0 +1,16 @@
+.wrap-share {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 20px;
+  border-radius: 8px;
+
+  button {
+    background-color: #3b75fc;
+    border: 1px solid #3b75fc;
+    border-radius: 8px;
+    padding: 8px 16px;
+    color: #fff;
+  }
+}

@@ -18,37 +18,13 @@ import Contact from '@components/sections/Contact'
 import Share from '@components/sections/Share'
 import Modal from './components/shared/Modal'
 import AttendCountModal from './components/AttendCountModal'
+import { getWedding } from './api/wedding'
+import useWedding from './hooks/useWedding'
 
 const cx = classNames.bind(styles)
 
 function App() {
-  const [wedding, setWedding] = useState<Wedding | null>(null)
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState(false)
-  const [count, setCount] = useState(0)
-
-  // 1. weddding date repsonse
-  useEffect(() => {
-    setLoading(true)
-
-    fetch('http://localhost:8888/wedding')
-      .then((response) => {
-        if (response.ok === false) {
-          throw new Error('청첩장 정보를 불러오지 못했습니다.')
-        }
-        return response.json()
-      })
-      .then((data) => {
-        setWedding(data)
-      })
-      .catch((e) => {
-        console.log('에러발생', e)
-        setError(true)
-      })
-      .finally(() => {
-        setLoading(false)
-      })
-  }, [])
+  const { wedding, loading, error } = useWedding()
 
   if (loading) {
     return <FullScreenMessage type="loading" />
@@ -73,17 +49,6 @@ function App() {
 
   return (
     <div className={cx('container')}>
-      <button
-        style={{
-          position: 'fixed',
-          top: 0,
-        }}
-        onClick={() => {
-          setCount((prev) => prev + 1)
-        }}
-      >
-        {count}
-      </button>
       <Heading date={date} />
       <Video />
       <Intro

@@ -37,7 +37,7 @@ function ImageViewer({
         {images?.map((src, idx) => {
           return (
             <SwiperSlide key={idx}>
-              <img src={src} alt="이미지 뷰어" />
+              <img src={`${src}.jpg`} alt="이미지 뷰어" />
             </SwiperSlide>
           )
         })}

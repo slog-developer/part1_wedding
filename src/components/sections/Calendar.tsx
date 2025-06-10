@@ -4,6 +4,7 @@ import Section from '@shared/Section'
 import { parseISO, format } from 'date-fns'
 import { ko } from 'date-fns/locale'
 import { DayPicker } from 'react-day-picker'
+import { memo } from 'react'
 
 import 'react-day-picker/dist/style.css'
 
@@ -56,4 +57,4 @@ function Calendar({ date }: { date: string }) {
   )
 }
 
-export default Calendar
+export default memo(Calendar)

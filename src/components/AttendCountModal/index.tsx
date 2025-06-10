@@ -50,7 +50,7 @@ function AttendCountModal({ wedding }: { wedding: Wedding }) {
         close()
       },
     })
-  }, []) // eslint-disable-line
+  }, [open, close])
   return null
 }
 
